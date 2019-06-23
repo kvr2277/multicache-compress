@@ -1,0 +1,26 @@
+{
+  "name": "multicache-compress",
+  "version": "1.0.0",
+  "description": "Serverless sample to store and get compressed values from multi level cache",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest",
+    "start": "./node_modules/.bin/serverless offline -s dev"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvr2277/multicache-compress.git"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.20.3"
+  },
+  "dependencies": {
+    "boom": "^7.3.0",
+    "cache-manager": "^2.9.1",
+    "cache-manager-redis-store": "^1.5.0",
+    "jsonpack": "^1.1.5",
+    "moment-timezone": "^0.5.21"
+  }
+}

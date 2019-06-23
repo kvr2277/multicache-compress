@@ -1,0 +1,23 @@
+service: multicache-service
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  getMovieHistory:
+    handler: api/moviehistory.getMovieHistory
+    memorySize: 128
+    description: Return users movie history
+    events:
+      - http: 
+          path: moviehist
+          method: get
+          authorizer: aws_iam
